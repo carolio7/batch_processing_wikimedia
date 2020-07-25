@@ -1,0 +1,53 @@
+{
+    "namespace": "danbriggs.frwiki",
+    "type": "record",
+    "name": "History",
+    "fields": [
+        {"name": "p_title", "type": "string"},
+        {"name": "p_namespace", "type": "long"},
+        {"name": "p_id", "type": "long"},
+        {
+            "name": "p_revisions",
+            "type": {
+                "type": "array",
+                "items": {
+                    "name": "revision",
+                    "type": "record",
+                    "fields": [
+                        {"name": "r_id", "type": "long"},
+                        {"name": "r_parent_id", "type": ["null","long"], "default": -911},
+                        {"name": "r_timestamp", "type": "string"},
+                        {
+                            "name": "r_contributor",
+                            "type": {
+                                "name": "Contribution",
+                                "type": "record",
+                                "fields": [
+                                  {"name": "r_username", "type": ["null","string"], "default": "No name"},
+                                  {"name": "r_contributor_id", "type": ["null","long"], "default": -911},
+                                  {"name": "r_contributor_ip", "type": ["null", "string"]}
+                                ]
+                            }
+                        },
+                        {"name": "r_minor", "type": ["null", "string"]},
+                        {"name": "r_comment", "type": ["null", "string"]},
+                        {"name": "r_model", "type": ["null", "string"]},
+                        {"name": "r_format", "type": ["null", "string"]},
+                        {
+                            "name": "r_text",
+                            "type": {
+                                "name": "Text",
+                                "type": "record",
+                                "fields": [
+                                  {"name": "r_text_id", "type": ["null","long"]},
+                                  {"name": "r_text_bytes", "type": ["null","long"]}
+                                ]
+                            }
+                        },
+                        {"name": "r_sha1", "type": ["null", "string"]}
+                    ]
+                }
+            }
+        }
+    ]
+}
