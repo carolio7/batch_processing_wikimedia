@@ -1,0 +1,21 @@
+/data/
+
+	.snapshot/*
+	frwiki/
+		raw/				
+			frwiki-20200201-stub-meta-history.xml
+			frwiki-20200201-pagelinks.sql
+			
+		
+		frwiki-20200201/		
+				master/
+					contribution5.avsc
+					links.avsc
+	
+					/full
+						*.avro						
+						
+					/test
+						*.avro
+						
+

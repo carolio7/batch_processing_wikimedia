@@ -1,0 +1,14 @@
+{
+    "namespace": "danbriggs.pagelinks",
+    "type": "record",
+    "name": "pagelink",
+    "fields":
+    	[
+		{"name": "pl_from", "type": "long"},
+		{"name": "pl_namespace", "type": "long"},
+		{"name": "pl_title", "type": "string"},
+		{"name": "pl_from_namespace", "type": "long"}
+
+    	]
+    	
+}
