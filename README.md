@@ -1,5 +1,7 @@
 # batch_processing_wikimedia
 
+![schéma architecture fonctionnelle](https://github.com/carolio7/batch_processing_wikimedia/blob/master/functional_architecture.png)
+
 ### 1. Présentation du sujet:
 Pour identifier les personnes ayant le plus contributées à un thème pointu donné, on va créer notre propre data lake à partir des historiques de pages de Wikipedia.
 Et comme, il peut y avoir plusieurs articles liées sur un thème donné, on utilisera aussi les liens entre les pages pour construire une structure orienté graphe. Dans cette graphe, les pages représentent les noeuds et les liens sont constitués des pages qui pointent vers notre page ou les liens que notre page utilise.
@@ -50,6 +52,9 @@ Et comme, il peut y avoir plusieurs articles liées sur un thème donné, on uti
 
 ### 3. Résultats:
         Si on recherche les trois meilleurs contributeur du cinéma surréaliste, on obtiendrait le résultat ci-dessous:
+
+![résultat](https://github.com/carolio7/batch_processing_wikimedia/blob/master/resultats.png)
+
 +-----------+-------+----+-----+
 |       name|     id|  ip|count|
 +-----------+-------+----+-----+
